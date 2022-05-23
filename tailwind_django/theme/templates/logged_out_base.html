@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% comment %} {% load common_urls %} {% endcomment %}
+
+{% block body %}
+  <div id="main" up-main>
+    {% block content %}{% endblock %}
+  </div>
+{% endblock %}
