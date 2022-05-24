@@ -5,14 +5,22 @@
 {% block content %}
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="">
-  {% comment %} <main class="w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8"> {% endcomment %}
-    <div class="relative overflow-hidden bg-blue">
-      <img class="object-cover opacity-70" src="{% static "/assets/homepage.jpg" %}" alt="home" />
-      <div class="absolute w-full pb-56 leading-4 text-center text-white bg-blue-400 text-8xl bottom-96 drop-shadow-xl"> Go Beyond </div>
-      <div class="absolute w-full pb-32 text-4xl leading-4 text-center text-white bg-blue-400 bottom-96 drop-shadow-xl"> Confidence &amp; Self-Esteem focused approach to realise one's potential </div>
-      <a class="relative w-full p-4 pb-12 text-4xl text-center bg-white bg-center rounded-full bottom-96 drop-shadow-xl"> Read More </a>
-
-    </div>
+    <div class="relative mx-auto bg-blue">
+        <img class="object-cover opacity-70" src="{% static "/assets/homepage.jpg" %}" alt="home" />
+      <div class="absolute left-0 right-0 flex items-center text-center top-10 bottom-10 bg-gradient-radial drop-shadow-2xl">
+        <div class="relative flex flex-col self-center justify-around p-12 mx-auto space-y-6 text-center text-white" >
+          <div class="px-1 mx-auto text-6xl font-bold lg:text-8xl">
+            Go Beyond
+          </div>
+          <div class="mx-auto text-base lg:text-4xl md:text-2xl">Confidence &amp; Self-Esteem focused approach to realise one's potential</div>
+            <div class="self-center py-6">
+              <a class="self-center px-4 py-3 text-lg font-semibold border rounded-full border-learnit-black whitespace-nowrap" href="#" >
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="max-w-xl py-16 mx-auto sm:py-16">
     </div>
   {% comment %} </main> {% endcomment %}

@@ -1,0 +1,34 @@
+{% load static %} 
+<div class="w-full px-12 mx-auto text-lg bg-white bg-opacity-70">
+    <div class="relative flex justify-between h-24">
+        <div class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
+            <div class="flex items-center flex-shrink-0">
+                <a class="w-20" href="{% url 'index' %}">
+                {% comment %} {% include "common/svg/logo.svg" %} {% endcomment %}
+                    <img class="object-cover rounded-full drop-shadow-xl" src="{% static "/assets/logo.jpg" %}" alt="home" />
+                </a>
+            </div>
+            <div class="items-center hidden sm:ml-6 sm:flex sm:space-x-6" up-nav>
+                {% block main_menu_items %}
+                    {% include "includes/nav_items.html" with wrapper="common/nav/desktop_nav_item.html" %}
+                {% endblock %}
+            </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <div class="relative text-brand-header-teal">
+                {% if user.is_authenticated %}
+                <div class="items-center hidden sm:ml-6 sm:flex sm:space-x-6">
+                    <div>
+                        Hi, {{ user.name }}
+                    </div>
+                    <div>
+                        <a href="#" up-layer="new" up-align="right" up-position="bottom" up-class="mt-2" up-mode="popup" up-history="false" up-accept-location="{{ request.path }}">Settings</a>
+                    </div>
+                </div>
+                {% else %}
+                <a href="#">Log In / Sign Up</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
