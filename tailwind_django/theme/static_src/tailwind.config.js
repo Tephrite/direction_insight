@@ -6,6 +6,7 @@
  */
 
 module.exports = {
+    mode: 'jit',
     content: [
         /**
          * HTML. Paths to Django template files that will contain Tailwind CSS classes.
@@ -48,6 +49,9 @@ module.exports = {
                 "light-blue": "#017afd",
                 "dark-blue": "#2d3e50",
                 "teal": "#0fd6ab",
+                "purple": "#9bb1ff",
+                "light-purple": "#BFD7FF",
+                "seaweed": "#177e89"
             },
         },
     },
