@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/39cd007abc.js" crossorigin="anonymous"></script>
   <link href="{% static "/css/dist/styles.css" %}" rel="stylesheet">
   <link href="{% static "/css/dist/unpoly.css" %}" rel="stylesheet">
   <script src="{% static '/js/index.js' %}"></script>
   <title>{% block title %}{% endblock %} - Direction Insight</title>
 </head>
-<body class="{% block body_classes %}{% endblock %}">
+<body class="{% block body_classes %}{% endblock %} ">
   {% block body %}{% endblock %}
 </body>
 </html>
