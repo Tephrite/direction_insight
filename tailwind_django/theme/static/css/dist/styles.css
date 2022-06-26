@@ -907,6 +907,11 @@ select {
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
+.bg-seaweed {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 126 137 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-70 {
   --tw-bg-opacity: 0.7;
 }
@@ -1142,6 +1147,21 @@ select {
 .text-purple {
   --tw-text-opacity: 1;
   color: rgb(155 177 255 / var(--tw-text-opacity));
+}
+
+.text-seaweed {
+  --tw-text-opacity: 1;
+  color: rgb(23 126 137 / var(--tw-text-opacity));
+}
+
+.text-blue {
+  --tw-text-opacity: 1;
+  color: rgb(8 37 79 / var(--tw-text-opacity));
+}
+
+.text-light-blue {
+  --tw-text-opacity: 1;
+  color: rgb(1 122 253 / var(--tw-text-opacity));
 }
 
 .opacity-70 {
