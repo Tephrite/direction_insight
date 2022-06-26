@@ -5,3 +5,6 @@ def index(request):
 
 def what_we_do(request):
     return render(request, 'what_we_do.html')
+
+def reviews(request):
+    return render(request, 'reviews.html')

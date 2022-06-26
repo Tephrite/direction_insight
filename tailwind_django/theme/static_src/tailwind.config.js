@@ -53,6 +53,12 @@ module.exports = {
                 "light-purple": "#BFD7FF",
                 "seaweed": "#177e89"
             },
+            fontSize:{
+                "client-review": "4rem",
+            },
+            width:{
+                "30": "110px",
+            },
         },
     },
     plugins: [
