@@ -7,7 +7,13 @@ Make sure you are in the tailwind_django directory in order for these commands t
 
 Logo: Brassica
 
-#### Run server
+#### Run servers
+
+```bash
+npm run start
+```
+
+OR
 
 ```bash
 python manage.py runserver
