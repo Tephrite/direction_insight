@@ -19,3 +19,9 @@ OR
 python manage.py runserver
 python manage.py tailwind start
 ```
+
+##### Email Server
+
+```bash
+python -m smtpd -n -c DebuggingServer localhost:1025
+```

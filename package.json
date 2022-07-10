@@ -3,7 +3,7 @@
   "version": "1",
   "description": "",
   "scripts": {
-    "start": "python manage.py runserver && python manage.py tailwind start"
+    "web": "python tailwind_django/manage.py tailwind start && python tailwind_django/manage.py runserver"
   },
   "keywords": [],
   "author": "",

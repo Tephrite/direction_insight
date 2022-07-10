@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-7+onbbnfi9wi#t)%uu+)6+0c*&(9kksxz)ekcqs=pxo3e)0=af
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-env.eba-v9ff7ukn.us-west-2.elasticbeanstalk.com', '127.0.0.1']
 
 
 # Application definition
@@ -137,3 +137,11 @@ INTERNAL_IPS = [
 ]
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+# Email Settings
+EMAIL_HOST = "localhost"
+EMAIL_PORT = "1025"
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
+EMAIL_USE_TLS = False
+# EMAIL_USE_SSL = False
