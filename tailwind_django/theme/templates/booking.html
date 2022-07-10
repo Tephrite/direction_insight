@@ -1,0 +1,240 @@
+{% extends "logged_out_base.html" %}
+{% load static %} 
+
+{% block title %}Areas D:I can help you with{% endblock %}
+{% block content %}
+
+<form action='{% url "booking" %}' method='post'>
+  {% csrf_token %}
+  <div class="min-h-screen bg-gradient-to-r from-blue to-light-purple ">
+    {% if booking_name %}
+      <div class="grid pt-6 pb-20 justify-items-center">
+        <h2 class="py-10 mx-auto text-4xl font-bold text-center text-white lg:text-6xl drop-shadow-xl "> Thanks {{ booking_name }}! </h2>
+        <p class="mx-auto text-2xl font-bold text-center text-white lg:text-4xl drop-shadow-xl "> We received your session request and will respond shortly </p>
+        <img class="object-cover w-1/6 pt-10 rounded-full drop-shadow-xl" src="{% static "/assets/logo.jpg" %}" alt="home" />
+      </div>
+    {% else %}
+      <div class="py-10 mx-auto text-6xl font-bold text-center text-white lg:text-8xl drop-shadow-xl ">
+        Step 1
+      </div>
+      <div class="py-10 mx-auto text-4xl font-bold text-center text-white lg:text-6xl drop-shadow-xl ">
+        Which area would you like assistance with?
+      </div>
+        <div class="flex justify-center pt-12 space-x-6">
+          <div class="max-w-sm px-6 overflow-hidden bg-white rounded shadow-lg">
+            <div class="py-4">
+              <div class="mb-2 text-xl font-bold">Student Academic</div>
+              <p class="text-base text-gray-700">
+                For students who would like to develop their education potential with academic-related skills.
+              </p>
+            </div>
+            <div class="pt-4 pb-2">
+              <span class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">#Minor</span>
+            </div>
+            <div>
+              <p class="pb-4 text-base text-gray-700">
+                Options
+              </p>
+              <div class="pb-4">
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Learning & Studying
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Organisation & Time Managament
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Coursework
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Humanities Subjects
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Systems of Knowledge
+                </p>
+              </div>
+            </div>
+            <div class="max-w-sm p-2 mb-10 overflow-hidden text-center text-white rounded shadow-lg bg-light-blue">
+              Try Now!
+            </div>
+          </div>
+
+          <div class="max-w-sm px-6 overflow-hidden bg-white rounded shadow-lg">
+            <div class="py-4">
+              <div class="mb-2 text-xl font-bold">Student PSCD</div>
+              <p class="text-base text-gray-700">
+                For students who would like to further develop their Personal and Social skills.
+              </p>
+            </div>
+            <div class="pt-4 pb-2">
+              <span class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">#Minor</span>
+            </div>
+            <div>
+              <p class="pb-4 text-base text-gray-700">
+                Options
+              </p>
+              <div class="pb-4">
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Assertiveness Skills
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Presentation Skills
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Relationship Skills
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Employability Skills
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Managing Your Talent
+                </p>
+              </div>
+            </div>
+            <div class="max-w-sm p-2 mb-10 overflow-hidden text-center text-white rounded shadow-lg bg-light-blue">
+              Try Now!
+            </div>
+          </div>
+
+          <div class="relative max-w-sm px-6 overflow-hidden bg-white rounded shadow-lg">
+            <div class="py-4">
+              <div class="mb-2 text-xl font-bold">Parent Mentoring</div>
+              <p class="text-base text-gray-700">
+                For parents to improve their relationships with challenging children.
+              </p>
+            </div>
+            <div class="pt-4 pb-2">
+              <span class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">#Adult</span>
+            </div>
+            <div>
+              <p class="pb-4 text-base text-gray-700">
+                Options
+              </p>
+              <div class="pb-4">
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Refine Communication
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Improve Effectiveness
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Efficient Control
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Creating Motivators
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Better Relationships
+                </p>
+              </div>
+            </div>
+            <div class="max-w-sm p-2 mb-10 overflow-hidden text-center text-white rounded shadow-lg bg-light-blue">
+              Try Now!
+            </div>
+          </div>
+
+          <div class="relative max-w-sm px-6 overflow-hidden bg-white rounded shadow-lg">
+            <div class="py-4">
+              <div class="mb-2 text-xl font-bold">Life Coaching</div>
+              <p class="text-base text-gray-700">
+                Self and mindset managment for any adult struggling to achieve their goals and aspirations.
+              </p>
+            </div>
+            <div class="pt-4 pb-2">
+              <span class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">#Adult</span>
+            </div>
+            <div>
+              <p class="pb-4 text-base text-gray-700">
+                Options
+              </p>
+              <div class="pb-4">
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Adjustment & Adaptation
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Daily Assertiveness
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Decision-making
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Motivation & Drive
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Relationships & Partners
+                </p>
+                <p class="flex items-center text-gray-600">
+                  <i class="px-4 text-green-300 fa-solid fa-check"></i>
+                    Breaking Habits & Self Control
+                </p>
+              </div>
+            </div>
+            <div class="max-w-sm p-2 mb-10 overflow-hidden text-center text-white rounded shadow-lg bg-light-blue">
+              Try Now!
+            </div>
+          </div>
+        </div>
+        <div class="py-10 mx-auto text-6xl font-bold text-center text-white lg:text-8xl drop-shadow-xl ">
+          Step 2
+        </div>
+        <div class="py-10 mx-auto text-4xl font-bold text-center text-white lg:text-6xl drop-shadow-xl ">
+          Why do you need this session? (needs reworded)
+        </div>
+        <div class="flex justify-center pt-8">
+          <div class="w-auto px-6 overflow-hidden bg-white rounded shadow-lg">
+            <div class="flex flex-wrap mb-6 -mx-3">
+              <div class="w-full px-3 pt-6">
+                <input class="block h-48 px-4 py-3 my-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none resize-none w-96 no-resize focus:outline-none focus:bg-white focus:border-gray-500" name="booking-reason" id="message"></input>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="py-10 mx-auto text-6xl font-bold text-center text-white lg:text-8xl drop-shadow-xl ">
+          Step 3
+        </div>
+        <div class="py-10 mx-auto text-4xl font-bold text-center text-white lg:text-6xl drop-shadow-xl ">
+          Contact Details
+        </div>
+        <div class="flex flex-wrap mb-6 mx-96">
+          <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
+            <label class="block mb-2 text-xs font-bold tracking-wide text-white uppercase" for="grid-first-name">
+              Name
+            </label>
+            <input class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white" id="grid-first-name" type="text" name="booking-name">
+          </div>
+          <div class="w-full px-3 md:w-1/2">
+            <label class="block mb-2 text-xs font-bold tracking-wide text-white uppercase" for="grid-last-name">
+              Email
+            </label>
+            <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="email" name="booking-email">
+          </div>
+        </div>
+        <div class="grid pt-6 pb-20 justify-items-center">
+          <button class="w-1/3 px-4 py-4 font-bold text-white rounded shadow bg-teal hover:bg-teal focus:shadow-outline focus:outline-none" type="submit">
+            Send
+          </button>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</form>
+{% endblock %}

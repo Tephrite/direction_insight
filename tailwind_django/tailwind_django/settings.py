@@ -139,9 +139,9 @@ INTERNAL_IPS = [
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 # Email Settings
-EMAIL_HOST = "localhost"
-EMAIL_PORT = "1025"
-EMAIL_HOST_USER = ""
-EMAIL_HOST_PASSWORD = ""
-EMAIL_USE_TLS = False
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = "587"
+EMAIL_HOST_USER = "nicholas.kissaun@gmail.com"
+EMAIL_HOST_PASSWORD = "pvzjhpxsyliwzvzm"
+EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
