@@ -1087,6 +1087,18 @@ select {
   padding-top: 2rem;
 }
 
+.pb-16 {
+  padding-bottom: 4rem;
+}
+
+.pb-\[70px\] {
+  padding-bottom: 70px;
+}
+
+.pb-\[72px\] {
+  padding-bottom: 72px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1133,6 +1145,18 @@ select {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[15px\] {
+  font-size: 15px;
+}
+
+.text-\[14px\] {
+  font-size: 14px;
+}
+
+.text-\[12px\] {
+  font-size: 12px;
 }
 
 .font-bold {
